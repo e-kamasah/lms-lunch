@@ -16,7 +16,7 @@ export default function WelcomeHero({ user }: WelcomeHeroProps) {
       <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
         <div>
           <h1 className="font-display text-2xl font-bold text-on-surface md:text-4xl">
-            Akwaaba, {user.greetingName}! 👋
+            Welcome, {user.greetingName}! 
           </h1>
           <p className="mt-3 max-w-xl text-base text-on-surface-variant md:text-lg">
             You're making great progress. Keep pushing towards your WASSCE goals.
