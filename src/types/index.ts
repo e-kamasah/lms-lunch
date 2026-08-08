@@ -13,6 +13,17 @@ export interface SyllabusModule {
   description: string;
   status: 'completed' | 'current' | 'locked';
   progressPercent?: number;
+  durationLabel?: string; // e.g. "05:20"
+  videoUrl?: string;
+}
+
+export interface QAMessage {
+  id: string;
+  authorName: string;
+  authorInitials: string;
+  role: 'student' | 'assistant';
+  timestamp: string;
+  text: string;
 }
 
 export interface Course {
@@ -22,13 +33,13 @@ export interface Course {
   tagline: string;
   description: string;
   level: CourseLevel;
-  tag?: string; // e.g. "WASSCE Prep", "Term 2", "Tertiary Prep"
+  tag?: string;
   featured?: boolean;
-  tags?: string[]; // e.g. Python, Web Dev
-  duration: string; // e.g. "12 Weeks"
+  tags?: string[]; 
+  duration: string;
   moduleCount?: number;
-  progressPercent: number; // 0 - not enrolled, else % complete
-  enrolledPercent?: number; // for "class filling fast" style courses
+  progressPercent: number; 
+  enrolledPercent?: number; 
   coverImageUrl: string;
   instructor: Instructor;
   syllabus: SyllabusModule[];

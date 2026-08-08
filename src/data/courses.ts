@@ -30,6 +30,7 @@ export const courses: Course[] = [
         title: 'Algebraic Expressions',
         description: 'Polynomials, factorisation, and basic equations.',
         status: 'completed',
+        durationLabel: '18:40',
       },
       {
         id: 'mod-2',
@@ -37,6 +38,7 @@ export const courses: Course[] = [
         title: 'Sets and Operations',
         description: 'Venn diagrams, union, intersection, and subsets.',
         status: 'completed',
+        durationLabel: '14:10',
       },
       {
         id: 'mod-3',
@@ -44,6 +46,7 @@ export const courses: Course[] = [
         title: 'Plane Geometry',
         description: 'Angles, triangles, circles, and theorems.',
         status: 'completed',
+        durationLabel: '22:05',
       },
       {
         id: 'mod-4',
@@ -52,6 +55,7 @@ export const courses: Course[] = [
         description: 'Sine, cosine, tangent rules and applications.',
         status: 'current',
         progressPercent: 25,
+        durationLabel: '19:30',
       },
       {
         id: 'mod-5',
@@ -59,6 +63,7 @@ export const courses: Course[] = [
         title: 'Statistics & Probability',
         description: 'Data presentation, central tendency, simple probability.',
         status: 'locked',
+        durationLabel: '16:15',
       },
       {
         id: 'mod-6',
@@ -66,6 +71,7 @@ export const courses: Course[] = [
         title: 'Coordinate Geometry',
         description: 'Lines, gradients, distances, and midpoints.',
         status: 'locked',
+        durationLabel: '17:50',
       },
       {
         id: 'mod-7',
@@ -73,6 +79,7 @@ export const courses: Course[] = [
         title: 'Calculus Foundations',
         description: 'Limits, differentiation, and simple applications.',
         status: 'locked',
+        durationLabel: '24:00',
       },
       {
         id: 'mod-8',
@@ -80,6 +87,7 @@ export const courses: Course[] = [
         title: 'Exam Revision',
         description: 'Past questions, timed mocks, and exam strategy.',
         status: 'locked',
+        durationLabel: '30:00',
       },
     ],
   },

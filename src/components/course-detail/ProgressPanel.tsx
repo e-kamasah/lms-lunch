@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { ArrowRight, PartyPopper } from 'lucide-react';
 import ProgressRing from '../ui/ProgressRing';
 import type { Course } from '../../types';
@@ -19,12 +20,13 @@ export default function ProgressPanel({ course, onEnroll }: ProgressPanelProps) 
           <h3 className="font-display text-xl font-bold text-on-surface">Your Progress</h3>
           <p className="mb-8 text-on-surface-variant">You're doing great! Keep it up.</p>
           <ProgressRing percent={course.progressPercent} />
-          <button
+          <Link
+            to={`/courses/${course.slug}/lesson`}
             className="mt-8 flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-4 text-lg font-bold text-on-primary shadow-[0_8px_20px_rgba(46,91,255,0.2)] transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_12px_25px_rgba(46,91,255,0.3)]"
           >
             Continue Learning
             <ArrowRight size={20} />
-          </button>
+          </Link>
           {nextModule && (
             <p className="mt-4 text-xs font-semibold text-on-surface-variant">
               Next: Module {nextModule.order} - {nextModule.title}

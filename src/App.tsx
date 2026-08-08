@@ -3,6 +3,7 @@ import AppLayout from './components/layout/AppLayout';
 import Dashboard from './pages/Dashboard';
 import Courses from './pages/Courses';
 import CourseDetail from './pages/CourseDetail';
+import Lesson from './pages/Lesson';
 import Community from './pages/Community';
 import StudyTools from './pages/StudyTools';
 import Flashcards from './pages/Flashcards';
@@ -18,6 +19,8 @@ export default function App() {
         <Route index element={<Dashboard />} />
         <Route path="courses" element={<Courses />} />
         <Route path="courses/:slug" element={<CourseDetail />} />
+        <Route path="courses/:slug/lesson" element={<Lesson />} />
+        <Route path="courses/:slug/lesson/:moduleId" element={<Lesson />} />
         <Route path="community" element={<Community />} />
         <Route path="study-tools" element={<StudyTools />} />
         <Route path="study-tools/flashcards" element={<Flashcards />} />
