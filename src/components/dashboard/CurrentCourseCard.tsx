@@ -1,21 +1,16 @@
+
 import { Link } from 'react-router-dom';
 import { Sigma, Atom } from 'lucide-react';
 import type { Course } from '../../types';
 import Badge from '../ui/Badge';
 import ProgressBar from '../ui/ProgressBar';
 
-const iconForCourse = (title: string) => {
-  if (/math/i.test(title)) return Sigma;
-  if (/phys/i.test(title)) return Atom;
-  return Sigma;
-};
-
 interface CurrentCourseCardProps {
   course: Course;
 }
 
 export default function CurrentCourseCard({ course }: CurrentCourseCardProps) {
-  const Icon = iconForCourse(course.title);
+  const isPhysics = /phys/i.test(course.title);
 
   return (
     <Link
@@ -24,7 +19,7 @@ export default function CurrentCourseCard({ course }: CurrentCourseCardProps) {
     >
       <div className="flex items-start justify-between">
         <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-tertiary-container/15 text-tertiary-container">
-          <Icon size={22} />
+          {isPhysics ? <Atom size={22} /> : <Sigma size={22} />}
         </div>
         {course.tag && (
           <Badge tone={course.accentColor === 'primary' ? 'secondary' : 'neutral'}>
@@ -32,12 +27,14 @@ export default function CurrentCourseCard({ course }: CurrentCourseCardProps) {
           </Badge>
         )}
       </div>
+
       <div>
         <h3 className="font-display text-lg font-bold text-on-surface group-hover:text-primary">
           {course.title}
         </h3>
         <p className="text-sm text-on-surface-variant">{course.tagline}</p>
       </div>
+
       <div>
         <div className="mb-1 flex items-center justify-between text-sm">
           <span className="font-medium text-on-surface-variant">Progress</span>
